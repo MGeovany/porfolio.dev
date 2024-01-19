@@ -1,3 +1,6 @@
+---
+import NavItem from './NavItem.astro'
+---
 <header
   class={`
     flex justify-center items-center
@@ -10,28 +13,16 @@
 >
   <nav
     class={`
-      border border-black rounded-full
-      px-3 py-1
+      border border-black rounded-lg
+      px-3 py-3
       flex flex-row items-center
       bg-neutral-200 dark:bg-black/50
       backdrop-blur-2xl
     `}
   >
-    <a
-      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
-      href="/#experiencia">Experience</a
-    >
-    <a
-      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
-      href="/#proyectos">Projects</a
-    >
-    <a
-      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
-      href="/#sobre-mi">About me</a
-    >
-    <a
-      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
-      href="/#contacto">Contact</a
-    >
+  <NavItem href="/#experiencia" text="Experience" />
+  <NavItem href="/#proyectos" text="Projects" />
+  <NavItem href="/#sobre-mi" text="About me" />
+  <NavItem href="/#contacto" text="Contact" />
   </nav>
 </header>
