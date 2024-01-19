@@ -1,9 +1,12 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import LinkButton from "./LinkButton.astro"
-import AstroIcon from "./icons/AstroIcon.astro"
+import LinkButton from "./LinkButton.astro";
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import VercelIcon from "./icons/VercelIcon.astro";
+import FramerIcon from "./icons/FramerIcon.astro";
 
 const TAGS = {
   NEXT: {
@@ -21,7 +24,22 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: AstroIcon,
   },
-}
+  VERCEL: {
+    name: "Vercel",
+    class: "bg-[#003159] text-white",
+    icon: VercelIcon,
+  },
+  REACT: {
+    name: "React Js",
+    class: "bg-[#003159] text-white",
+    icon: ReactIcon,
+  },
+  FRAMER: {
+    name: "Framer Motion",
+    class: "bg-[#003159] text-white",
+    icon: FramerIcon,
+  },
+};
 const PROJECTS = [
   {
     title: "Astro Blog - A blog of the tech list I use",
@@ -33,21 +51,21 @@ const PROJECTS = [
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "BiDeskU - Professional graphic design service",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Bidesku is a comprehensive web platform designed to streamline the management of contracts, funds, FAQs, and dashboard functionalities. Built from scratch with Bulma Css, Chart js.",
+    link: "https://bidesku.vercel.app/",
+    image: "/projects/bidesku.webp",
+    tags: [TAGS.REACT, TAGS.VERCEL, TAGS.FRAMER],
   },
-]
+];
 ---
 
 <section class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article>
-        <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+        <h3 class="text-2xl font-semibold text-blue-800 dark:text-blue-200 mb-2">
           {title}
         </h3>
         <p class="text-lg mb-4 text-pretty">{description}</p>
@@ -55,7 +73,7 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-3 `}
               >
                 <tag.icon class="size-4" />
                 {tag.name}
