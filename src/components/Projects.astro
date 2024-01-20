@@ -7,6 +7,7 @@ import AstroIcon from "./icons/AstroIcon.astro";
 import ReactIcon from "./icons/ReactIcon.astro";
 import VercelIcon from "./icons/VercelIcon.astro";
 import FramerIcon from "./icons/FramerIcon.astro";
+import JavascriptIcon from "./icons/JavascriptIcon.astro";
 
 const TAGS = {
   NEXT: {
@@ -39,6 +40,11 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: FramerIcon,
   },
+  JAVASCRIPT: {
+    name: "Vanilla Javascript",
+    class: "bg-[#003159] text-white",
+    icon: JavascriptIcon,
+  },
 };
 const PROJECTS = [
   {
@@ -55,8 +61,17 @@ const PROJECTS = [
     description:
       "Bidesku is a comprehensive web platform designed to streamline the management of contracts, funds, FAQs, and dashboard functionalities. Built from scratch with Bulma Css, Chart js.",
     link: "https://bidesku.vercel.app/",
+    github: "https://github.com/MGeovany/bidesku-v2",
     image: "/projects/bidesku.webp",
     tags: [TAGS.REACT, TAGS.VERCEL, TAGS.FRAMER],
+  },
+  {
+    title: "Simple ToDo App - Project made easy. Achieve more with Javascript.",
+    description:
+      "Effortlessly manage tasks with our intuitive ToDo app. Stay organized, set priorities, and boost productivity with ease.",
+    link: "https://codepen.io/MGeovany/full/LYdxLmw",
+    image: "/projects/todo.webp",
+    tags: [TAGS.JAVASCRIPT],
   },
 ];
 ---
