@@ -8,6 +8,7 @@ import ReactIcon from "./icons/ReactIcon.astro";
 import VercelIcon from "./icons/VercelIcon.astro";
 import FramerIcon from "./icons/FramerIcon.astro";
 import JavascriptIcon from "./icons/JavascriptIcon.astro";
+import TypescriptIcon from "./icons/TypescriptIcon.astro";
 
 const TAGS = {
   NEXT: {
@@ -35,6 +36,11 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: ReactIcon,
   },
+  REACT_NATIVE: {
+    name: "React Native",
+    class: "bg-[#003159] text-white",
+    icon: ReactIcon,
+  },
   FRAMER: {
     name: "Framer Motion",
     class: "bg-[#003159] text-white",
@@ -45,8 +51,21 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: JavascriptIcon,
   },
+  TYPESCRIPT: {
+    name: "Typescript",
+    class: "bg-[#003159] text-white",
+    icon: TypescriptIcon,
+  },
 };
 const PROJECTS = [
+  {
+    title: "Savvly Mobile App - React Native + TypeScript FinTech app",
+    description:
+      "Demonstrating my expertise in Mobile development with React Native and TypeScript, I developed a comprehensive financial saving app for a startup. The application features modules for contract creation, payout estimation, simulations, FAQ integration, and secure Stripe payments. Leveraging MobX for global state management and Sentry for error tracking, I showcased strong programming skills in delivering a robust solution for the startup's needs",
+    link: "https://savvly.com",
+    image: "/projects/savvly.webp",
+    tags: [TAGS.REACT_NATIVE, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+  },
   {
     title: "Astro Blog - A blog of the tech list I use",
     description:
