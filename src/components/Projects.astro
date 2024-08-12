@@ -10,12 +10,18 @@ import FramerIcon from "./icons/FramerIcon.astro";
 import JavascriptIcon from "./icons/JavascriptIcon.astro";
 import TypescriptIcon from "./icons/TypescriptIcon.astro";
 import ExpoIcon from "./icons/ExpoIcon.astro";
+import RedisIcon from "./icons/RedisIcon.astro";
 
 const TAGS = {
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
     icon: NextJS,
+  },
+  REDDIS: {
+    name: "Reddis",
+    class: "bg-[#003159] text-white",
+    icon: RedisIcon,
   },
   TAILWIND: {
     name: "Tailwind CSS",
@@ -63,7 +69,16 @@ const TAGS = {
     icon: ExpoIcon,
   },
 };
+
 const PROJECTS = [
+  {
+    title: "store-env - Store Environment Variables Encrypted",
+    description:
+      "store-env is web-app that allows you to store your environment variables encrypted in Reddis. It is a simple and secure way to manage your environment variables in your projects.",
+    link: "https://store-env.vercel.app/",
+    image: "/projects/store-env.webp",
+    tags: [TAGS.NEXT, TAGS.REDDIS, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.VERCEL],
+  },
   {
     title: "zorocut.dev - URL Shortener",
     description:
